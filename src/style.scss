@@ -1,0 +1,38 @@
+.just-quiz__screen {
+  display: none;
+  animation-name: just-quiz-fade-in;
+  animation-fill-mode: forwards;
+  animation-duration: var(--just-quiz-fade-time);
+}
+
+.just-quiz__screen--current {
+  display: block;
+}
+
+.just-quiz__controls > .just-quiz__stepper {
+  display: none;
+}
+
+.is-first-quiz-step .just-quiz__stepper--next {
+  display: inline-block;
+}
+
+.is-midterm-survey .just-quiz__stepper--prev,
+.is-midterm-survey .just-quiz__stepper--next {
+  display: inline-block;
+}
+
+.is-last-quiz-step .just-quiz__stepper--prev,
+.is-last-quiz-step .just-quiz__stepper--submit {
+  display: inline-block;
+}
+
+@keyframes just-quiz-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
